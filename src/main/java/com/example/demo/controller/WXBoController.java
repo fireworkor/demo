@@ -54,7 +54,7 @@ public class WXBoController {
     }
     @RequestMapping("add3")
     public void add3(WXBo wxBo ) {
-        Optional<WXBo> model = wxBoRepository.findById(2);
+        Optional<WXBo> model = wxBoRepository.findById(3);
         WXBo           wxBo1 =new WXBo();
         wxBo1   = model.get();
         wxBo1.setWxcount(wxBo1.getWxcount() + 1);
@@ -62,7 +62,7 @@ public class WXBoController {
     }
     @RequestMapping("add4")
     public void add4(WXBo wxBo ) {
-        Optional<WXBo> model = wxBoRepository.findById(2);
+        Optional<WXBo> model = wxBoRepository.findById(4);
         WXBo           wxBo1 =new WXBo();
         wxBo1   = model.get();
         wxBo1.setWxcount(wxBo1.getWxcount() + 1);
