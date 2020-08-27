@@ -17,20 +17,55 @@ public class WXBoController {
     @GetMapping("/")
     public ModelAndView index() {
         Optional<WXBo> model = wxBoRepository.findById(1);
+        Optional<WXBo> mode2 = wxBoRepository.findById(2);
+        Optional<WXBo> mode3 = wxBoRepository.findById(3);
+        Optional<WXBo> mode4 = wxBoRepository.findById(4);
         WXBo           wxBo1 =new WXBo();
+        WXBo           wxBo2 =new WXBo();
+        WXBo           wxBo3 =new WXBo();
+        WXBo           wxBo4 =new WXBo();
         wxBo1   = model.get();
+        wxBo2   = model.get();
+        wxBo3   = model.get();
+        wxBo4   = model.get();
         ModelAndView modelAndView =new ModelAndView("index");
-        modelAndView.addObject("wxcount", wxBo1.getWxcount());
+        modelAndView.addObject("wxcount1", wxBo1.getWxcount());
+        modelAndView.addObject("wxcount2", wxBo2.getWxcount());
+        modelAndView.addObject("wxcount3", wxBo3.getWxcount());
+        modelAndView.addObject("wxcount4", wxBo4.getWxcount());
         return modelAndView;
 
     }
-    @RequestMapping("addOne")
-    public void addOne(WXBo wxBo ) {
+    @RequestMapping("add1")
+    public void add1(WXBo wxBo ) {
         Optional<WXBo> model = wxBoRepository.findById(1);
         WXBo           wxBo1 =new WXBo();
         wxBo1   = model.get();
         wxBo1.setWxcount(wxBo1.getWxcount() + 1);
         wxBoRepository.save(wxBo1);
     }
-
+    @RequestMapping("add2")
+    public void add2(WXBo wxBo ) {
+        Optional<WXBo> model = wxBoRepository.findById(2);
+        WXBo           wxBo1 =new WXBo();
+        wxBo1   = model.get();
+        wxBo1.setWxcount(wxBo1.getWxcount() + 1);
+        wxBoRepository.save(wxBo1);
+    }
+    @RequestMapping("add3")
+    public void add3(WXBo wxBo ) {
+        Optional<WXBo> model = wxBoRepository.findById(2);
+        WXBo           wxBo1 =new WXBo();
+        wxBo1   = model.get();
+        wxBo1.setWxcount(wxBo1.getWxcount() + 1);
+        wxBoRepository.save(wxBo1);
+    }
+    @RequestMapping("add4")
+    public void add4(WXBo wxBo ) {
+        Optional<WXBo> model = wxBoRepository.findById(2);
+        WXBo           wxBo1 =new WXBo();
+        wxBo1   = model.get();
+        wxBo1.setWxcount(wxBo1.getWxcount() + 1);
+        wxBoRepository.save(wxBo1);
+    }
 }
