@@ -25,9 +25,9 @@ public class WXBoController {
         WXBo           wxBo3 =new WXBo();
         WXBo           wxBo4 =new WXBo();
         wxBo1   = model.get();
-        wxBo2   = model.get();
-        wxBo3   = model.get();
-        wxBo4   = model.get();
+        wxBo2   = mode2.get();
+        wxBo3   = mode3.get();
+        wxBo4   = mode4.get();
         ModelAndView modelAndView =new ModelAndView("index");
         modelAndView.addObject("wxcount1", wxBo1.getWxcount());
         modelAndView.addObject("wxcount2", wxBo2.getWxcount());
